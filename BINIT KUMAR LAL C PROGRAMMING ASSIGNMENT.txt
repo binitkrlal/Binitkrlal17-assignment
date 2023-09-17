@@ -1,0 +1,868 @@
+BINIT KUMAR LAL
+SECTION=AL
+ROLL NO = 17
+SUB= PROGRAMMING ASSIGNMENT.
+
+
+
+
+
+
+
+
+
+Q1-
+
+#include <stdio.h>
+
+int main() {
+    float originalPrice, taxRate, finalPrice;
+
+    // Input the original price and tax rate
+    printf("Enter the original price: ");
+    scanf("%f", &originalPrice);
+    
+    printf("Enter the tax rate (in percentage): ");
+    scanf("%f", &taxRate);
+
+    // Calculate the final price
+    finalPrice = originalPrice + (originalPrice * (taxRate / 100));
+
+    // Display the final price
+    printf("The final price after adding %.2f%% tax is: $%.2f\n", taxRate, finalPrice);
+
+    return 0;
+}
+
+Q2-
+#include <stdio.h>
+
+int main() {
+    double hourlyWage, weeklyWage;
+    int hoursWorked;
+
+    // Input the hourly wage and hours worked
+    printf("Enter the hourly wage: ");
+    scanf("%lf", &hourlyWage);
+    printf("Enter the hours worked this week: ");
+    scanf("%d", &hoursWorked);
+
+    // Calculate the weekly wage
+    if (hoursWorked <= 30) {
+        weeklyWage = hourlyWage * hoursWorked;
+    } else {
+        weeklyWage = (hourlyWage * 30) + (hourlyWage * 2 * (hoursWorked - 30));
+    }
+
+    // Display the result
+    printf("Weekly wage: $%.2lf\n", weeklyWage);
+
+    return 0;
+}
+
+Q3-
+#include <stdio.h>
+
+int main() {
+    // Define the prices and quantities of each item
+    float apple_price_per_kg = 50.0;
+    float mango_price_per_kg = 35.0;
+    float potato_price_per_kg = 10.0;
+    float tomato_price_per_kg = 15.0;
+    
+    float apple_quantity = 2.0;
+    float mango_quantity = 1.5;
+    float potato_quantity = 2.5;
+    float tomato_quantity = 1.0;
+
+    // Calculate the total cost of each item
+    float apple_cost = apple_quantity * apple_price_per_kg;
+    float mango_cost = mango_quantity * mango_price_per_kg;
+    float potato_cost = potato_quantity * potato_price_per_kg;
+    float tomato_cost = tomato_quantity * tomato_price_per_kg;
+
+    // Calculate the total cost of all items
+    float total_cost = apple_cost + mango_cost + potato_cost + tomato_cost;
+
+    // Given amount Mr. X has
+    float amount_given = 500.0;
+
+    // Calculate the amount to be returned
+    float amount_to_return = amount_given - total_cost;
+    // Display the amount to be returned
+    printf("Amount to be returned to Mr. X: Rs %.2f\n", amount_to_return);
+
+    return 0;
+}
+
+
+
+
+Q4-
+#include <stdio.h>
+
+int main() {
+    printf("Name: Your Name\n");
+    printf("Date of Birth: January 1, 2000\n");
+    printf("Mobile Number: +1234567890\n");
+    
+    return 0;
+}
+
+
+Q5-
+#include <stdio.h>
+
+int main() {
+    int integerNumber;
+    char character;
+    float floatValue;
+
+    // Read an integer from the user
+    printf("Enter an integer: ");
+    scanf("%d", &integerNumber);
+
+    // Read a character from the user
+    printf("Enter a character: ");
+    scanf(" %c", &character); // Note the space before %c to consume any newline characters left in the input buffer.
+
+    // Read a float value from the user
+    printf("Enter a float value: ");
+    scanf("%f", &floatValue);
+
+    // Display the values on different lines
+    printf("You entered:\n");
+    printf("Integer: %d\n", integerNumber);
+    printf("Character: %c\n", character);
+    printf("Float: %.2f\n", floatValue);
+
+    return 0;
+}
+
+
+Q6-
+#include <stdio.h>
+
+int main() {
+    double cost = 172.53; // Replace this with your actual cost value
+
+    printf("The sales total is : $ %.2lf\n", cost);
+
+    return 0;
+}
+
+
+
+
+Q7-
+#include <stdio.h>
+
+int main() {
+    int numberOfPeople = 3; // Raju got apples from 3 people
+    double applesPerPerson = 6.5; // Raju got 6.5 apples from each person
+
+    // Calculate the total number of apples without adding manually
+    double totalApples = numberOfPeople * applesPerPerson;
+
+    printf("Raju has a total of %.2lf apples.\n", totalApples);
+
+    return 0;
+}
+
+
+
+Q8-
+
+
+#include <stdio.h>
+
+int main() {
+    double value;
+
+    // Input the floating-point value
+    printf("Enter a floating-point value: ");
+    scanf("%lf", &value);
+
+    // Print the value in exponential format with two decimal places
+    printf("Value in exponential format: %.2e\n", value);
+
+    return 0;
+}
+
+
+
+
+Q9-
+
+#include <stdio.h>
+
+int main() {
+    long long int mobileNumber; // Using long long int to accommodate 10-digit numbers
+
+    // Prompt the user to enter their mobile number
+    printf("Please enter your 10-digit mobile number: ");
+    
+    // Read the mobile number from the user
+    scanf("%lld", &mobileNumber);
+
+    // Check if the entered number is a 10-digit number
+    if (mobileNumber >= 1000000000LL && mobileNumber <= 9999999999LL) {
+        // Print the entered mobile number
+        printf("You entered: %lld\n", mobileNumber);
+    } else {
+        printf("Invalid input. Please enter a 10-digit mobile number.\n");
+    }
+
+    return 0;
+}
+
+
+Q10-
+#include <stdio.h>
+
+int main() {
+    int population = 30000;
+    
+    // First-year growth
+    population = population + (population * 20 / 100);
+
+    // Second-year growth
+    population = population + (population * 30 / 100);
+
+    printf("Population after two years: %d\n", population);
+
+    return 0;
+}
+
+
+Q11-
+#include <stdio.h>
+
+int main() {
+    char character;
+    printf("Enter a character: ");
+    scanf("%c", &character);
+
+    int asciiValue = character;
+    printf("The ASCII value of %c is %d\n", character, asciiValue);
+
+    return 0;
+}
+
+Q12-
+#include <stdio.h>
+
+int main() {
+    float basicPay, HRA, TA, salary;
+
+    // Input basic pay from the user
+    printf("Enter the basic pay: ");
+    scanf("%f", &basicPay);
+
+    // Calculate HRA and TA
+    HRA = 0.15 * basicPay;
+    TA = 0.20 * basicPay;
+
+    // Calculate total salary
+    salary = basicPay + HRA + TA;
+
+    // Display the calculated salary
+    printf("Salary = %.2f\n", salary);
+
+    return 0;
+}
+
+Q13-
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Coordinates of points P and Q
+    double xp, yp, xq, yq;
+    
+    // Input the coordinates of P and Q
+    printf("Enter the coordinates of point P (xp yp): ");
+    scanf("%lf %lf", &xp, &yp);
+    
+    printf("Enter the coordinates of point Q (xq yq): ");
+    scanf("%lf %lf", &xq, &yq);
+    
+    // Calculate the slope of the line
+    double slope = (yq - yp) / (xq - xp);
+    
+    // Calculate the angle of inclination (in degrees)
+    double angle = atan(slope) * 180 / M_PI;
+    
+    // Output the results
+    printf("Slope of the line: %.2lf\n", slope);
+    printf("Angle of inclination (in degrees): %.2lf\n", angle);
+    
+    return 0;
+}
+
+Q14-
+#include <stdio.h>
+
+int main() {
+    int k = 5; // Number of courses
+    double grade_points[] = {g1, g2, g3, g4, g5}; // Replace g1, g2, g3, g4, g5 with actual grade points
+    int credits[] = {c1, c2, c3, c4, c5}; // Replace c1, c2, c3, c4, c5 with actual credits
+
+    double spi = 0.0;
+    double total_credits = 0.0;
+
+    // Calculate the SPI
+    for (int i = 0; i < k; i++) {
+        spi += grade_points[i] * credits[i];
+        total_credits += credits[i];
+    }
+
+    spi /= total_credits;
+
+    printf("SPI: %.2lf\n", spi);
+
+    return 0;
+}
+
+Q15-
+#include <stdio.h>
+
+int main() {
+    double wavelength, speed, frequency;
+
+    // Input wavelength and speed
+    printf("Enter wavelength (in meters): ");
+    scanf("%lf", &wavelength);
+    
+    printf("Enter speed (in meters/second): ");
+    scanf("%lf", &speed);
+
+    // Calculate frequency
+    frequency = speed / wavelength;
+
+    // Output the result
+    printf("The frequency of the wave is: %.2lf Hz\n", frequency);
+
+    return 0;
+}
+
+Q16-
+#include <stdio.h>
+
+int main() {
+    // Given values
+    float initial_velocity = 30.0;  // m/s
+    float acceleration = 5.0;       // m/s^2
+    float distance = 70.0;          // meters
+
+    // Calculate the final velocity
+    float final_velocity_squared = (initial_velocity * initial_velocity) + (2 * acceleration * distance);
+    float final_velocity = sqrt(final_velocity_squared);
+
+    printf("The final velocity of the car is: %.2f m/s\n", final_velocity);
+
+    return 0;
+}
+
+Q17-
+#include <stdio.h>
+
+int main() {
+    // Given values
+    float u = 0;      // Initial velocity (starting from rest)
+    float a = 4;      // Acceleration in m/s^2
+    float t = 3;      // Time in seconds
+
+    // Calculate final velocity (v)
+    float v = u + (a * t);
+
+    // Calculate distance traveled (s)
+    float s = u * t + 0.5 * a * t * t;
+
+    // Display the results
+    printf("Final velocity (v): %.2f m/s\n", v);
+    printf("Distance traveled (s): %.2f meters\n", s);
+
+    return 0;
+}
+
+Q18-
+#include <stdio.h>
+
+int main() {
+    int rollNumber = 12345678; // Replace with your actual roll number
+    int lastFourDigits = rollNumber % 10000; // Extract the last four digits
+    int digit1 = lastFourDigits / 1000;
+    int digit2 = (lastFourDigits % 1000) / 100;
+    int digit3 = (lastFourDigits % 100) / 10;
+    int digit4 = lastFourDigits % 10;
+    
+    int sum = digit1 + digit2 + digit3 + digit4;
+    
+    printf("Sum of the last four digits: %d\n", sum);
+    
+    return 0;
+}
+
+Q19-
+
+#include <stdio.h>
+
+#define CM_TO_INCH 0.393701
+#define KG_TO_POUND 2.20462
+
+int main() {
+    // Initialize height and weight in centimeters and kilograms
+    double heightInCm = 175.0;
+    double weightInKg = 70.0;
+
+    // Convert height to feet and weight to pounds
+    double heightInFeet = heightInCm * CM_TO_INCH / 12.0;
+    double weightInPounds = weightInKg * KG_TO_POUND;
+
+    // Display the results
+    printf("Height: %.2f cm = %.2f feet\n", heightInCm, heightInFeet);
+    printf("Weight: %.2f kg = %.2f pounds\n", weightInKg, weightInPounds);
+
+    return 0;
+}
+
+
+Q20-
+#include<studio.h>
+
+int main() {
+char option;
+return 0;
+}
+#include<stdio.h>
+int main() 
+{
+int sum=0;
+return 0;
+}
+#include<stdio.h>
+int main()
+{
+float product= 1.0;
+return 0;
+}
+
+Q21-
+#include <stdio.h>
+
+int main() {
+    int numbers[9];
+    
+    // Read nine integers
+    printf("Enter nine integers:\n");
+    for (int i = 0; i < 9; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    // Display the numbers in groups of three
+    printf("Numbers in groups of three:\n");
+    for (int i = 0; i < 9; i++) {
+        printf("%d", numbers[i]);
+        
+        // Print a comma after the number except for the last number in each group
+        if ((i + 1) % 3 != 0) {
+            printf(", ");
+        } else {
+            printf("\n");
+        }
+    }
+    
+Q22-
+
+A header file is a file with extension .h which contains C function declarations and macro definitions to be shared between several source files.
+
+Q23-
+
+#include<stdio.h>
+int main()
+{   int num=070;
+printf(“%d\t%o\t%x”,num,num,num);
+}
+
+Output:-56	70	38
+
+Q24-
+
+24- 
+
+#include <stdio.h>
+int main() 
+{
+int x = printf("GLA UNIVERSITY");
+   	printf("%d", x);
+  	 }
+
+Output:- GLA UNIVERSITY13
+
+Q25-
+
+Library functions are built-in functions that are grouped together and placed in a common location called library
+
+Ceil, clock, clearerr, cos
+
+
+Q26-
+
+ #include <stdio.h>
+void main() 
+{
+ 	  int x = printf("C is placement oriented Language") – printf(“Hi”);
+ 	  printf("%d %o %x", x,x,x);
+ 	}
+Output:- 32,40,20
+
+
+Q27-
+
+The statement `printf("%d", scanf("%d%d", &a, &b));` is a C programming language statement that combines the use of the `printf` and `scanf` functions.
+
+Here's a breakdown of what this statement does:
+
+1. `scanf("%d%d", &a, &b)` is used to read input from the user. It expects the user to enter two integers, which are stored in the variables `a` and `b`. The `"%d%d"` format specifier is used to read two integers, and `&a` and `&b` are the memory addresses where the entered integers will be stored.
+
+2. The return value of `scanf` is the number of successfully read items. In this case, if both integers are successfully read, it returns `2` because two items (the values of `a` and `b`) have been read.
+
+3. Finally, `printf("%d", ...)` is used to print a value to the console. In this case, it's printing the result of the `scanf` function, which is `2`.
+
+So, when you run this code and enter two integers, it will print `2` because `scanf` successfully read two integers and returned `2`.
+
+Q28-
+#include <stdio.h> 
+void main() 
+{ 
+  printf(" \"C %% FOR %% PLACEMENT\""); 
+}
+
+Q29-
+#include <stdio.h>
+
+int main() {
+    double distance, time, speed;
+
+    // Input distance in kilometers
+    printf("Enter the distance between GLA University and Delhi in kilometers: ");
+    scanf("%lf", &distance);
+
+    // Input time in hours
+    printf("Enter the time taken to reach Delhi by bus in hours: ");
+    scanf("%lf", &time);
+
+    // Calculate speed in km/h
+    speed = distance / time;
+          // Display the result
+    printf("The speed of the bus is %.2lf km/h\n", speed);
+
+    return 0;
+}
+
+Q30-
+#include <stdio.h>
+
+int main() {
+    int satyam_marks = 50;
+    int suman_marks = 70;
+    int shyam_marks = 80;
+    float average_marks;
+
+    // Calculate the average marks
+    average_marks = (satyam_marks + suman_marks + shyam_marks) / 3.0;
+
+    // Display the average marks
+    printf("The average marks of Satyam, Suman, and Shyam is: %.2f\n", average_marks);
+
+    return 0;
+
+Q31-
+#include <stdio.h>
+
+int main() {
+    // Initialize variables to store the money given to Saurav and Sajal
+    int saurav_money, sajal_money, temp;
+
+    // Input the money given to Saurav and Sajal
+    printf("Enter the money given to Saurav: ");
+    scanf("%d", &saurav_money);
+
+    printf("Enter the money given to Sajal: ");
+    scanf("%d", &sajal_money);
+
+    // Swap the money
+    temp =
+    saurav_money;
+    saurav_money = sajal_money;
+    sajal_money = temp;
+
+    // Display the corrected amounts
+    printf("After swapping, the money given to Saurav is: %d\n", saurav_money);
+    printf("After swapping, the money given to Sajal is: %d\n", sajal_money);
+
+    return 0;
+}
+
+
+Q32-
+#include <stdio.h>
+
+int main() {
+    float speed = 4.0; // Speed in km/h
+    float time = 3.0 / 60; // Time in hours (3 minutes converted to hours)
+    float distance;
+
+    // Calculate the distance
+    distance = speed * time;
+
+    printf("You traveled %.2f kilometers.\n", distance);
+
+    return 0;
+}
+
+Q33-
+Yes, it's perfectly valid to combine operators, especially if the need arises.
+
+Q34-
+The Multi-line comment in C starts with a forward slash and asterisk ( /* ) and ends with an asterisk and forward slash ( */ ).
+
+Q35-
+
+An ampersand & symbol must be placed before the variable name whatnumber. Placing & means whatever integer value is entered by the user is stored at the "address" of the variable name. This is a common mistake for programmers, often leading to logical errors.
+ 
+Correct statement:-scanf("%d", &number);
+
+
+Q36-
+#include <stdio.h>
+int main()
+{
+    if (sizeof(int) > -1)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
+
+
+Q37-
+Invalid are gross salary,salary of emp and avg.
+
+
+Q38-
+
+#include <stdio.h>
+
+int main() {
+    double tankSize = 175.0; // Gallons
+    double drainageRate = 25.0; // Gallons per hour
+
+    // Calculate the time required to drain the tank completely
+    double timeRequired = tankSize / drainageRate;
+
+    // Display the result
+    printf("It will take %.2f hours to completely drain the tank.\n", timeRequired);
+
+    return 0;
+}
+
+
+
+
+Q39-
+
+
+#include <stdio.h>
+
+int main() {
+    double y = 0.75; // 75% in decimal form
+    double x;
+
+    // Solve for x using the equation y = -0.2x + 1
+    x = (1 - y) / 0.2;
+
+    printf("The battery power is at 75%% after %.2f hours.\n", x);
+
+    return 0;
+}
+
+
+Q40-
+
+Compiler
+
+
+Q41-
+
+%o
+
+Q42-
+
+%.2f
+
+
+Q43-
+
+Array
+
+Q44-
+
+#include<stdio.h>
+void main()
+{
+  int x=0;
+  x= printf("\"hello\b\"");
+  printf(“%d”,x);
+}
+
+Output:-"hell"8
+
+
+Q45-
+
+
+#include<stdio.h>
+void main()
+{
+  int b,c=5 ;
+  int(“%d , %d”, b,c);
+}
+
+
+Q46-
+
+enum
+
+Q47-
+
+ #include<stdio.h>
+
+int main() {
+   char x, a = 'c';
+   x = printf("%c", a);
+   printf("%d", x);
+   return 0;
+}
+
+
+output:-c1
+
+
+
+Q48-
+
+1)(325.54)6 ≈ 6121 in decimal.
+2)(1001010110101.1110101)2 ≈ 4805.9140625 in decimal.
+3) (742.72)8 ≈ 482.90625 in decimal.
+4) (AC94.C5)16 ≈ 44180.76953125 in decimal.
+
+
+Q49-
+
+1) 
+Base-6 to Decimal (325.54)6
+Decimal equivalent ≈ 125.9444
+
+2) Binary to Decimal (1001010110101.1110101)2:
+Decimal equivalent ≈ 4810.7975
+
+3) Octal to Decimal (742.72)8:
+Decimal equivalent ≈ 60.390625
+
+4) Hexadecimal to Decimal (AC94.
+Decimal equivalent ≈ 44280.7695
+
+
+
+
+Q50-
+
+
+(1101101101010110.110011010100)₂ in binary.
+(3335331520)₈ in octal.
+(31231123110)₄ in quaternary.
+
+
+
+
+Q52-
+
+(23)10 = (17)A
+To convert both numbers to the same base, we can choose base 17 since it's smaller than base 23.
+So, (23)10 = (16 + 7)10 = (1 * 17^1 + 7 * 17^0)10 = (17)A
+
+Now, we can see that A must be 1, so A = 1.
+
+(21)16 = (41)A
+To convert both numbers to the same base, we can choose base 41 since it's smaller than base 16.
+So, (21)16 = (1 * 41^1 + 21 * 41^0)16 = (41)A
+
+Now, we can see that A must be 21, so A = 21.
+
+(32)8 = (101)A
+To convert both numbers to the same base, we can choose base 8 since it's smaller than base 101.
+So, (32)8 = (3 * 8^1 + 2 * 8^0)8 = (101)A
+
+Now, we can see that A must be 3, so A = 3.
+
+Therefore, the values of A are:
+A = 1 for the first equation,
+A = 21 for the second equation, and
+A = 3 for the third equation
+
+
+Q54-
+
+#include <stdio.h>
+ int main()
+{
+ float c = 5.0;
+ printf ("Temperature in Fahrenheit is %.2f", (9/5)*c + 32);
+ return 0;
+}
+
+Output:-0
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
